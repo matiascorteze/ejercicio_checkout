@@ -1,0 +1,26 @@
+.secondaryProduct {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(240, 240, 240);
+  margin: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(https://images.philips.com/is/image/PhilipsConsumer/HD4825_95-IMS-es_AR?$jpglarge$&wid=960);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+.secondaryProduct:hover{
+  box-shadow:2px 2px 1px goldenrod;
+}
+
+.secondaryProduct h3 {
+  font-size: 15px;
+  margin: 5px;
+  color: #21272d;
+}

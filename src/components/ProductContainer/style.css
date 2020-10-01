@@ -1,0 +1,16 @@
+.productList {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  background-color: #21272d;
+  width: 90%;
+  align-self: center;
+  margin-top: 20px;
+}
+
+.secondList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;2400&display=swap');
+/* font-family: 'Raleway', sans-serif; */
+
+.mainProduct {
+  width: 220px;
+  height: 220px;
+  background-color: rgb(240, 240, 240);
+  margin: 20px 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+  background-image: url(https://images-na.ssl-images-amazon.com/images/I/71k1Lc%2BDpYL._AC_SL1500_.jpg);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+.mainProduct:hover{
+  box-shadow:2px 2px 1px goldenrod;
+}
+
+.name, .price {
+  margin: 10px;
+  color: #21272d;
+}

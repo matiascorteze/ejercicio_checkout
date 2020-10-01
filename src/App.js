@@ -1,24 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Cart from './components/Cart';
+import Navbar from './components/Navbar';
+import ProductContainer from './components/ProductContainer';
+import TotalContainer from './components/TotalContainer';
 
 function App() {
+
+  const [productList, setProductList] = useState([])
+  const [toggle, setToggle] = useState(true)
+
+  function handleInfo(name, price) {
+    const product = {
+      name,
+      price
+    }
+
+    const tempState = [
+      ...productList
+    ]
+
+    tempState.push(product)
+
+    setProductList(tempState)
+  }
+
+  function handleToggle() {
+    toggle === false ? setToggle(true) : setToggle(false);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar handleToggle={handleToggle}/>
+      <ProductContainer handleInfo={handleInfo}/>
+      <div className="line"></div>
+      {toggle === false ? <></> : <div className="cartContainer">
+        <Cart productList={productList}/>
+        <TotalContainer productList={productList}/>
+      </div>}
+      
     </div>
   );
 }
